@@ -6,6 +6,19 @@
 	<string>me.wrtsprt.jekyll.blog</string>
 	<key>connections</key>
 	<dict>
+		<key>13740A64-40C0-46BD-ACDE-62306EAEDDC8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EEDA046A-6158-4CF8-9D32-5ABFAD3FFEA1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1CD8A4AD-65A1-4AB4-B98A-3514FE0B16D5</key>
 		<array>
 			<dict>
@@ -87,6 +100,16 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>966D1C8E-EAB9-4738-AAA5-F8B10C80A73F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>13740A64-40C0-46BD-ACDE-62306EAEDDC8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -298,7 +321,7 @@ FileUtils.mv("#{jekyll_base_path}/_drafts/#{query}", "#{jekyll_base_path}/_posts
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"publish","arg":"publish","subtitle":"publish draft"},{"title":"new","arg":"new","subtitle":"Create new draft"},{"title":"run server","arg":"run","subtitle":"run server"}]</string>
+				<string>[{"title":"publish","arg":"publish","subtitle":"publish draft"},{"title":"new","arg":"new","subtitle":"Create new draft"},{"title":"run server","arg":"run","subtitle":"run server"},{"title":"Open in browser","arg":"open","subtitle":"Open"}]</string>
 				<key>keyword</key>
 				<string>blog</string>
 				<key>runningsubtext</key>
@@ -459,6 +482,44 @@ jekyll serve --watch --drafts --config _config.yml,_config_dev.yml</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://localhost:4000</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>EEDA046A-6158-4CF8-9D32-5ABFAD3FFEA1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>run</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>13740A64-40C0-46BD-ACDE-62306EAEDDC8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>This workflow implements little helpers for daily work with the jekyll (the simple blog aware static site generator). 
@@ -468,6 +529,15 @@ jekyll serve --watch --drafts --config _config.yml,_config_dev.yml</string>
   * automatically adds the current date to the file name</string>
 	<key>uidata</key>
 	<dict>
+		<key>13740A64-40C0-46BD-ACDE-62306EAEDDC8</key>
+		<dict>
+			<key>note</key>
+			<string>open</string>
+			<key>xpos</key>
+			<integer>360</integer>
+			<key>ypos</key>
+			<integer>640</integer>
+		</dict>
 		<key>1CD8A4AD-65A1-4AB4-B98A-3514FE0B16D5</key>
 		<dict>
 			<key>note</key>
@@ -543,6 +613,13 @@ jekyll serve --watch --drafts --config _config.yml,_config_dev.yml</string>
 			<integer>360</integer>
 			<key>ypos</key>
 			<integer>370</integer>
+		</dict>
+		<key>EEDA046A-6158-4CF8-9D32-5ABFAD3FFEA1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>560</integer>
+			<key>ypos</key>
+			<integer>610</integer>
 		</dict>
 		<key>F6520C5E-CC6B-43C7-9141-C2CFCF590BD4</key>
 		<dict>
