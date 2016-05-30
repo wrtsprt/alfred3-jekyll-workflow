@@ -321,7 +321,7 @@ FileUtils.mv("#{jekyll_base_path}/_drafts/#{query}", "#{jekyll_base_path}/_posts
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"publish","arg":"publish","subtitle":"publish draft"},{"title":"new","arg":"new","subtitle":"Create new draft"},{"title":"run server","arg":"run","subtitle":"run server"},{"title":"Open in browser","arg":"open","subtitle":"Open"}]</string>
+				<string>[{"title":"publish","arg":"publish","subtitle":"publish draft"},{"title":"new","arg":"new","subtitle":"Create new draft"},{"title":"Run development server","arg":"run","subtitle":"run dev server"},{"title":"Open in browser","arg":"open","subtitle":"Open"}]</string>
 				<key>keyword</key>
 				<string>blog</string>
 				<key>runningsubtext</key>
@@ -511,7 +511,7 @@ jekyll serve --watch --drafts --config _config.yml,_config_dev.yml</string>
 				<key>matchmode</key>
 				<integer>0</integer>
 				<key>matchstring</key>
-				<string>run</string>
+				<string>open</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.filter</string>
