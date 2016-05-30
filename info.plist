@@ -374,7 +374,11 @@ end</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>This workflow implements little helpers for daily work with the jekyll (the simple blog aware static site generator). 
+
+* create new draft 
+* publish existing draft
+  * automatically adds the current date to the file name</string>
 	<key>uidata</key>
 	<dict>
 		<key>1CD8A4AD-65A1-4AB4-B98A-3514FE0B16D5</key>
@@ -451,7 +455,7 @@ end</string>
 		<string>/Users/rap/src/wrtsprt.github.io</string>
 	</dict>
 	<key>version</key>
-	<string></string>
+	<string>0.1Alpha</string>
 	<key>webaddress</key>
 	<string>github.com/wrtsprt</string>
 </dict>
