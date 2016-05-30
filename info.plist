@@ -36,6 +36,32 @@
 		<array/>
 		<key>8C0E7866-5098-45F4-BFB6-F8B27315104E</key>
 		<array/>
+		<key>966D1C8E-EAB9-4738-AAA5-F8B10C80A73F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A7CFFAD0-A66F-4725-B2BF-1DC1009AE31F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A7CFFAD0-A66F-4725-B2BF-1DC1009AE31F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1F3A0CEC-854F-4D05-A4D6-CBE90CD98445</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C446FA63-E1F4-4210-8FF1-4CAB1DBEF875</key>
 		<array>
 			<dict>
@@ -51,6 +77,16 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>D27131AD-9623-4B37-B266-FA92CFD04630</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>966D1C8E-EAB9-4738-AAA5-F8B10C80A73F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -261,7 +297,7 @@ FileUtils.mv("#{jekyll_base_path}/_drafts/#{query}", "#{jekyll_base_path}/_posts
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"publish","arg":"publish","subtitle":"publish draft"},{"title":"new","arg":"new","subtitle":"Create new draft"}]</string>
+				<string>[{"title":"publish","arg":"publish","subtitle":"publish draft"},{"title":"new","arg":"new","subtitle":"Create new draft"},{"title":"run server","arg":"run","subtitle":"run server"}]</string>
 				<key>keyword</key>
 				<string>blog</string>
 				<key>runningsubtext</key>
@@ -277,6 +313,25 @@ FileUtils.mv("#{jekyll_base_path}/_drafts/#{query}", "#{jekyll_base_path}/_posts
 			<string>alfred.workflow.input.listfilter</string>
 			<key>uid</key>
 			<string>C446FA63-E1F4-4210-8FF1-4CAB1DBEF875</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>subtext</key>
+				<string>Choose a name for the post</string>
+				<key>text</key>
+				<string>Choose a name for the post</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>FB8BE053-428B-4760-9BD4-A91B60F8873B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -322,25 +377,6 @@ end</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>subtext</key>
-				<string>Choose a name for the post</string>
-				<key>text</key>
-				<string>Choose a name for the post</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>FB8BE053-428B-4760-9BD4-A91B60F8873B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>variables</key>
@@ -372,6 +408,56 @@ end</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>cd {query}
+jekyll serve --watch --drafts --config _config.yml,_config_dev.yml</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>1F3A0CEC-854F-4D05-A4D6-CBE90CD98445</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:jekyll_base_path}</string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>A7CFFAD0-A66F-4725-B2BF-1DC1009AE31F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>run</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>966D1C8E-EAB9-4738-AAA5-F8B10C80A73F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>This workflow implements little helpers for daily work with the jekyll (the simple blog aware static site generator). 
@@ -389,6 +475,13 @@ end</string>
 			<integer>360</integer>
 			<key>ypos</key>
 			<integer>220</integer>
+		</dict>
+		<key>1F3A0CEC-854F-4D05-A4D6-CBE90CD98445</key>
+		<dict>
+			<key>xpos</key>
+			<integer>560</integer>
+			<key>ypos</key>
+			<integer>470</integer>
 		</dict>
 		<key>2E11D777-6EEA-4E7C-9D27-89D71F1CAC77</key>
 		<dict>
@@ -410,6 +503,22 @@ end</string>
 			<integer>910</integer>
 			<key>ypos</key>
 			<integer>100</integer>
+		</dict>
+		<key>966D1C8E-EAB9-4738-AAA5-F8B10C80A73F</key>
+		<dict>
+			<key>note</key>
+			<string>run</string>
+			<key>xpos</key>
+			<integer>360</integer>
+			<key>ypos</key>
+			<integer>500</integer>
+		</dict>
+		<key>A7CFFAD0-A66F-4725-B2BF-1DC1009AE31F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>470</integer>
+			<key>ypos</key>
+			<integer>500</integer>
 		</dict>
 		<key>C446FA63-E1F4-4210-8FF1-4CAB1DBEF875</key>
 		<dict>
