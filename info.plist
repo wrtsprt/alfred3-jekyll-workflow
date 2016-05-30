@@ -59,11 +59,24 @@
 				<false/>
 			</dict>
 		</array>
-		<key>D27131AD-9623-4B37-B266-FA92CFD04630</key>
+		<key>CD8F09E9-70E6-4E7A-A9D7-9FC67A45261F</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>FB8BE053-428B-4760-9BD4-A91B60F8873B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D27131AD-9623-4B37-B266-FA92CFD04630</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CD8F09E9-70E6-4E7A-A9D7-9FC67A45261F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -176,6 +189,29 @@ puts result.to_json</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
+				<string>ls $jekyll_base_path/_drafts/</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2E11D777-6EEA-4E7C-9D27-89D71F1CAC77</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
 				<string>require 'fileutils'
 
 query = ARGV[0]
@@ -195,29 +231,6 @@ FileUtils.mv("#{jekyll_base_path}/_drafts/#{query}", "#{jekyll_base_path}/_posts
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>8C0E7866-5098-45F4-BFB6-F8B27315104E</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>ls $jekyll_base_path/_drafts/</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>2E11D777-6EEA-4E7C-9D27-89D71F1CAC77</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -314,7 +327,7 @@ end</string>
 				<key>subtext</key>
 				<string>Choose a name for the post</string>
 				<key>text</key>
-				<string>name of the post</string>
+				<string>Choose a name for the post</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -322,6 +335,21 @@ end</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>FB8BE053-428B-4760-9BD4-A91B60F8873B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>CD8F09E9-70E6-4E7A-A9D7-9FC67A45261F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -368,7 +396,7 @@ end</string>
 		<key>50D5991F-A91E-4920-ACF6-0F540F7E904F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>710</integer>
+			<integer>750</integer>
 			<key>ypos</key>
 			<integer>340</integer>
 		</dict>
@@ -385,6 +413,13 @@ end</string>
 			<integer>70</integer>
 			<key>ypos</key>
 			<integer>300</integer>
+		</dict>
+		<key>CD8F09E9-70E6-4E7A-A9D7-9FC67A45261F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>470</integer>
+			<key>ypos</key>
+			<integer>370</integer>
 		</dict>
 		<key>D27131AD-9623-4B37-B266-FA92CFD04630</key>
 		<dict>
@@ -405,7 +440,7 @@ end</string>
 		<key>FB8BE053-428B-4760-9BD4-A91B60F8873B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>520</integer>
+			<integer>560</integer>
 			<key>ypos</key>
 			<integer>340</integer>
 		</dict>
