@@ -254,6 +254,7 @@ query = ARGV[0]
 jekyll_base_path = ENV['jekyll_base_path']
 
 file_date = Time.now.strftime('%F')
+front_matter_date = Time.now.strftime('%F %T')
 
 FileUtils.mv("#{jekyll_base_path}/_drafts/#{query}", "#{jekyll_base_path}/_posts/#{file_date}-#{query}")</string>
 				<key>scriptargtype</key>
@@ -349,7 +350,7 @@ jekyll_base_path = ENV['jekyll_base_path']
 default_content = &lt;&lt;-EOF
 ---
 title: #{query}
-date: 
+date: #{Time.now.strftime('%F %T')}
 layout: post
 categories: []
 tags: []
