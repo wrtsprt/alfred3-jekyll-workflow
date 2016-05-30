@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>me.wrtsprt.jekyll.blog</string>
+	<key>connections</key>
+	<dict>
+		<key>1CD8A4AD-65A1-4AB4-B98A-3514FE0B16D5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2E11D777-6EEA-4E7C-9D27-89D71F1CAC77</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2E11D777-6EEA-4E7C-9D27-89D71F1CAC77</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F6520C5E-CC6B-43C7-9141-C2CFCF590BD4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>50D5991F-A91E-4920-ACF6-0F540F7E904F</key>
+		<array/>
+		<key>8C0E7866-5098-45F4-BFB6-F8B27315104E</key>
+		<array/>
+		<key>C446FA63-E1F4-4210-8FF1-4CAB1DBEF875</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1CD8A4AD-65A1-4AB4-B98A-3514FE0B16D5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D27131AD-9623-4B37-B266-FA92CFD04630</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D27131AD-9623-4B37-B266-FA92CFD04630</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FB8BE053-428B-4760-9BD4-A91B60F8873B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F6520C5E-CC6B-43C7-9141-C2CFCF590BD4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8C0E7866-5098-45F4-BFB6-F8B27315104E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FB8BE053-428B-4760-9BD4-A91B60F8873B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>50D5991F-A91E-4920-ACF6-0F540F7E904F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>wrtsprt</string>
+	<key>description</key>
+	<string>Blog Jekyll Stuff</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>blog</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>draft</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>wainting ...</string>
+				<key>script</key>
+				<string>query = ARGV[0]
+
+require 'json' 
+
+result = {items:[]}
+
+default_item = { autocomplete: ''} 
+
+query.split("\n").each do |item|
+   result[:items] &lt;&lt; default_item.merge({ 
+			'title' =&gt; item, 
+			'autocomplete' =&gt; item,
+			'arg' =&gt; item
+	 })
+end
+
+puts result.to_json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>choosing draft</string>
+				<key>title</key>
+				<string>choose draft</string>
+				<key>type</key>
+				<integer>2</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>F6520C5E-CC6B-43C7-9141-C2CFCF590BD4</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>require 'fileutils'
+
+query = ARGV[0]
+jekyll_base_path = ENV['jekyll_base_path']
+
+file_date = Time.now.strftime('%F')
+
+FileUtils.mv("#{jekyll_base_path}/_drafts/#{query}", "#{jekyll_base_path}/_posts/#{file_date}-#{query}")</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8C0E7866-5098-45F4-BFB6-F8B27315104E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>ls $jekyll_base_path/_drafts/</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2E11D777-6EEA-4E7C-9D27-89D71F1CAC77</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>publish</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>1CD8A4AD-65A1-4AB4-B98A-3514FE0B16D5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>fixedorder</key>
+				<true/>
+				<key>items</key>
+				<string>[{"title":"publish","arg":"publish","subtitle":"publish draft"},{"title":"new","arg":"new","subtitle":"Create new draft"}]</string>
+				<key>keyword</key>
+				<string>blog</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string>helping with jekyll blogs ..</string>
+				<key>title</key>
+				<string>Blog Jekyll Helper</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>C446FA63-E1F4-4210-8FF1-4CAB1DBEF875</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query = ARGV[0]
+jekyll_base_path = ENV['jekyll_base_path']
+
+default_content = &lt;&lt;-EOF
+---
+title: #{query}
+date: 
+layout: post
+categories: []
+tags: []
+---
+
+EOF
+
+File.open("#{jekyll_base_path}/_drafts/#{query}.markdown", 'w') do |f|
+  f.write default_content
+end</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>50D5991F-A91E-4920-ACF6-0F540F7E904F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>subtext</key>
+				<string>Choose a name for the post</string>
+				<key>text</key>
+				<string>name of the post</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>FB8BE053-428B-4760-9BD4-A91B60F8873B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>new</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>D27131AD-9623-4B37-B266-FA92CFD04630</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>1CD8A4AD-65A1-4AB4-B98A-3514FE0B16D5</key>
+		<dict>
+			<key>note</key>
+			<string>publish</string>
+			<key>xpos</key>
+			<integer>360</integer>
+			<key>ypos</key>
+			<integer>220</integer>
+		</dict>
+		<key>2E11D777-6EEA-4E7C-9D27-89D71F1CAC77</key>
+		<dict>
+			<key>xpos</key>
+			<integer>560</integer>
+			<key>ypos</key>
+			<integer>100</integer>
+		</dict>
+		<key>50D5991F-A91E-4920-ACF6-0F540F7E904F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>710</integer>
+			<key>ypos</key>
+			<integer>340</integer>
+		</dict>
+		<key>8C0E7866-5098-45F4-BFB6-F8B27315104E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>910</integer>
+			<key>ypos</key>
+			<integer>100</integer>
+		</dict>
+		<key>C446FA63-E1F4-4210-8FF1-4CAB1DBEF875</key>
+		<dict>
+			<key>xpos</key>
+			<integer>70</integer>
+			<key>ypos</key>
+			<integer>300</integer>
+		</dict>
+		<key>D27131AD-9623-4B37-B266-FA92CFD04630</key>
+		<dict>
+			<key>note</key>
+			<string>new</string>
+			<key>xpos</key>
+			<integer>360</integer>
+			<key>ypos</key>
+			<integer>370</integer>
+		</dict>
+		<key>F6520C5E-CC6B-43C7-9141-C2CFCF590BD4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>730</integer>
+			<key>ypos</key>
+			<integer>100</integer>
+		</dict>
+		<key>FB8BE053-428B-4760-9BD4-A91B60F8873B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>520</integer>
+			<key>ypos</key>
+			<integer>340</integer>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>jekyll_base_path</key>
+		<string>/Users/rap/src/wrtsprt.github.io</string>
+	</dict>
+	<key>version</key>
+	<string></string>
+	<key>webaddress</key>
+	<string>github.com/wrtsprt</string>
+</dict>
+</plist>
